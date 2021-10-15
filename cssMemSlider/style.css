@@ -21,11 +21,35 @@ body {
     box-shadow: 2px 2px 15px rgba(0, 0, 0, .4);
 }
 
+.slider-wrapper {
+    display: flex;
+    width: 3500px;
+    transition: all .5s;
+}
+
 .img {
+    width: 700px;
     height: 400px;
     object-fit: cover;
     background-size: 100% 100%;
     background-repeat: no-repeat; 
+    
+}
+
+#slide1:checked ~ .slider-img .slider-wrapper {
+    margin-left: 0;
+}
+#slide2:checked ~ .slider-img .slider-wrapper {
+    margin-left: -700px;
+}
+#slide3:checked ~ .slider-img .slider-wrapper {
+    margin-left: -1400px;
+}
+#slide4:checked ~ .slider-img .slider-wrapper {
+    margin-left: -2100px;
+}
+#slide5:checked ~ .slider-img .slider-wrapper {
+    margin-left: -2800px;
 }
 
 .img1 {background-image: url("./images/1.jpg");}
