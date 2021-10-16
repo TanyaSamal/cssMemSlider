@@ -33,7 +33,6 @@ body {
     object-fit: cover;
     background-size: 100% 100%;
     background-repeat: no-repeat; 
-    
 }
 
 #slide1:checked ~ .slider-img .slider-wrapper {
@@ -59,11 +58,35 @@ body {
 .img5 {background-image: url("./images/5.jpg");}
 
 .slider-text {
+    width: 300px;
     height: 50px;
     overflow: hidden;
 }
 
+.text-wrapper {
+    width: 1500px;
+    display: flex;
+    transition: all .5s;
+}
+
+#slide1:checked ~ .slider-text .text-wrapper {
+    margin-left: 0;
+}
+#slide2:checked ~ .slider-text .text-wrapper {
+    margin-left: -300px;
+}
+#slide3:checked ~ .slider-text .text-wrapper {
+    margin-left: -600px;
+}
+#slide4:checked ~ .slider-text .text-wrapper {
+    margin-left: -900px;
+}
+#slide5:checked ~ .slider-text .text-wrapper {
+    margin-left: -1200px;
+}
+
 .text {
+    width: 300px;
     padding: 20px 0;
     font-family: 'Nunito', sans-serif;
     font-size: 1em;
